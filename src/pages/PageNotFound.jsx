@@ -1,12 +1,7 @@
-import NavPage from "../components/NavPage";
-
-function PageNotFound() {
+export default function PageNotFound() {
   return (
-    <h1>
-      <NavPage />
-      <h1>Page Not Found:</h1>
-    </h1>
+    <div>
+      <h1>Page not found 😢</h1>
+    </div>
   );
 }
-
-export default PageNotFound;

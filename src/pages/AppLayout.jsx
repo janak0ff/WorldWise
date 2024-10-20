@@ -1,12 +1,12 @@
-import NavApp from "../components/NavApp";
-import NavPage from "../components/NavPage";
+import AppNav from "../components/AppNav";
+import PageNav from "../components/PageNav";
 
 function AppLayout() {
   return (
     <div>
-      <NavPage />
+      <PageNav />
       <p>App</p>
-      <NavApp />
+      <AppNav />
     </div>
   );
 }
