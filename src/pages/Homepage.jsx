@@ -1,7 +1,10 @@
+import NavPage from "../components/NavPage"
+
 function Homepage() {
     return (
         <div>
-            WroldWise
+            <NavPage/>
+            <h1>WroldWise</h1>
         </div>
     )
 }
