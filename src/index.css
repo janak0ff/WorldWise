@@ -21,6 +21,30 @@
   box-sizing: inherit;
 }
 
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+  height: 2px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary); /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dark);
+}
+
+/* Custom for horizontal scrollbar */
+::-webkit-scrollbar-track:horizontal {
+  background-color: #ff0000; /* Horizontal track color */
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
