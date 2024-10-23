@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./Css_Modules/City.module.css";
 import { useCities } from "../Contexts/CititesContext";
 import { useEffect } from "react";
