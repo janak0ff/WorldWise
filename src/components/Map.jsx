@@ -10,25 +10,44 @@ import {
 import styles from "./Css_Modules/Map.module.css";
 import { useEffect, useState } from "react";
 import { useCities } from "../Contexts/CititesContext";
+import { useGeolocation } from "../hooks/useGeolocation";
+import Button from "./Button";
 
 function Map() {
-  const navigate = useNavigate();
   const { cities } = useCities();
-  const [mapPosition, setMaPosition] = useState([40, 0]);
+  const [mapPosition, setMapPosition] = useState([40, 0]);
   const [searchParams] = useSearchParams();
+  const {
+    isLoading: isLoadingPosition,
+    position: geolocationPosition,
+    getPosition,
+  } = useGeolocation();
 
   const mapLat = searchParams.get("lat");
   const mapLng = searchParams.get("lng");
 
   useEffect(() => {
-    if (mapLat && mapLng) setMaPosition([mapLat, mapLng]);
+    if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
+
+  useEffect(
+    function () {
+      if (geolocationPosition)
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    },
+    [geolocationPosition]
+  );
 
   return (
     <div className={styles.mapContainer}>
+      {!geolocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
-        zoom={6}
+        zoom={10}
         scrollWheelZoom={true}
         className={styles.map}
       >
