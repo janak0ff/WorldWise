@@ -35,6 +35,30 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Kathmandu",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-11-14T04:23:33.333Z",
+      "notes": "Most polluted city in Nepal",
+      "position": {
+        "lat": "27.692648352279555",
+        "lng": "85.33681869506837"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Manthali",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-11-14T04:26:13.011Z",
+      "notes": "My hometown",
+      "position": {
+        "lat": "27.37999889041236",
+        "lng": "86.06174468994142"
+      },
+      "id": 98443199
     }
   ]
 }
