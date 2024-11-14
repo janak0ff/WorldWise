@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -16,7 +16,7 @@ import { useUrlPosition } from "../hooks/useUrlPosition";
 
 function Map() {
   const { cities } = useCities();
-  const [mapPosition, setMapPosition] = useState([40, 0]);
+  const [mapPosition, setMapPosition] = useState([27.7172, 85.324]);
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
