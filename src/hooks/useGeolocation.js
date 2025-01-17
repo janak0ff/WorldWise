@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 /**
  * A hook that provides the current geolocation of the user.
  *
